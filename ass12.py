@@ -1,4 +1,3 @@
-"""
 f = open("Poem.txt","r")
 l = f.readlines()
 l = l[::-1]
@@ -35,7 +34,7 @@ for i in l:
     print()
 
 
-"""
+
 
 
 
