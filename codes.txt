@@ -1,0 +1,204 @@
+#include <stdio.h>
+
+int main() {
+    int n, s = 0;
+    printf("Enter number to check if it is perfect: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i < n; i++) {
+        if (n % i == 0) {
+            s += i;
+        }
+    }
+
+    if (s == n)
+        printf("%d is a perfect number\n", n);
+    else
+        printf("%d isn't a perfect number\n", n);
+
+    return 0;
+}
+
+
+
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double x, s = 0.0;
+    int n;
+
+    printf("Enter the value of x (in radians): ");
+    scanf("%lf", &x);
+
+    printf("Enter the number of terms n: ");
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        int power = 2 * i + 1;
+        long fact = 1;
+        for (int j = 1; j <= power; j++) {
+            fact *= j;
+        }
+        s += pow(-1, i) * pow(x, power) / fact;
+    }
+
+    printf("sin(%.6lf) ≈ %.6lf\n", x, s);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int n, t = 1;
+
+    printf("Enter number of lines: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", t);
+            t++;
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int n, k;
+
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    printf("Enter the value of k: ");
+    scanf("%d", &k);
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= k; j++) {
+            printf("%d\t", i * j);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int num, prime, p = 0, c = 0;
+
+    do {
+        scanf("%d", &num);
+
+        if (num == -1) break;
+        if (num <= 1) continue;
+
+        prime = 1;
+        for (int i = 2; i <= num / 2; i++) {
+            if (num % i == 0) {
+                prime = 0;
+                break;
+            }
+        }
+
+        if (prime == 1)
+            p++;
+        else
+            c++;
+    } while (num != -1);
+
+    printf("The number of prime numbers is %d\n", p);
+    printf("The number of composite numbers is %d\n", c);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int a, t, g = 0, d;
+
+    printf("Enter the number: ");
+    scanf("%d", &a);
+
+    t = a;
+    while (t != 0) {
+        d = t % 10;
+        g = g + d * d * d;
+        t = t / 10;
+    }
+
+    if (g == a)
+        printf("%d is an Armstrong number\n", a);
+    else
+        printf("%d is not an Armstrong number\n", a);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
